@@ -1,0 +1,112 @@
+.main {
+    padding: 0 10% 300px;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.totalValueLocked {
+    margin: 80px 0;
+    padding: 20px 0;
+    border-top: 1px solid #474747;
+    border-bottom: 1px solid #474747;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vaults {
+    display: flex;
+    justify-content: space-around;
+}
+
+.overviewHeader {
+    padding-top: 60px;
+    font-size: 40px;
+    background: linear-gradient(90deg, #E15D47 -12.4%, #C62E85 112.8%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.vimeoWrapper {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    width: 100vw;
+    height: 66.66vw;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vimeoWrapper iframe {
+    width: 100vw;
+    height: 69.25vw;
+    /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+    min-height: 100vh;
+    min-width: 177.77vh;
+    /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wavePosition {
+    position: absolute;
+    z-index: -1;
+    top: 90vh;
+}
+
+.imageContainer {
+    position: 'absolute';
+    top: 0;
+    width: 100vw;
+    height: 66.66vw;
+}
+
+.landingImage {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+}
+
+.overviewWrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100vw;
+}
+
+.text {
+    width: 45%;
+}
+
+@media (max-width: 1000px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 3%;
+    }
+    .text {
+        width: 80%;
+    }
+    .vaults {
+        padding-bottom: 200px;
+    }
+}
+
+@media (max-width: 770px) {
+    .totalValueLocked {
+        width: 80%;
+    }
+    .main {
+        overflow: hidden;
+        width: unset;
+    }
+}

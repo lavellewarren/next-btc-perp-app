@@ -1,0 +1,59 @@
+.vaultDepositInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    padding: 60px 0px;
+}
+
+.infoAssetIcon {
+    display: flex;
+    align-items: center;
+    flex: 0 1 auto;
+    justify-content: flex-start;
+    margin-right: 80px;
+}
+
+.vaultDepositsStatus {
+    margin-right: 32px;
+    align-self: center;
+    flex: 1 1 auto;
+}
+
+.depositInfo {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+    letter-spacing: 0.15px;
+    /* Text/Secondary */
+    color: rgba(255, 255, 255, 0.74);
+}
+
+@media (max-width: 1000px) {
+    .vaultDepositInfo {
+        flex-direction: column;
+    }
+    .infoAssetIcon {
+        padding-bottom: 30px;
+    }
+    .vaultDepositsStatus {
+        flex: unset;
+        align-self: unset;
+        width: 80%;
+    }
+}
+
+@media (max-width: 770px) {
+    .infoAssetIcon {
+        margin-right: 0;
+    }
+    .depositInfo {
+        font-size: 12px;
+    }
+    .vaultDepositsStatus {
+        margin-right: 0;
+    }
+}

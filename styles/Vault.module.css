@@ -1,0 +1,115 @@
+.vaultPageWrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 0 3%;
+    overflow: hidden;
+}
+
+.vaultSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: stretch;
+    position: relative;
+    z-index: 1;
+    max-width: 1424px;
+    overflow: hidden;
+    padding: 0 1%;
+}
+
+.vimeoWrapper {
+    position: absolute;
+    bottom: -50vh;
+    left: 0;
+    width: 100vw;
+    height: 66.66vw;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.vimeoWrapper iframe {
+    width: 100vw;
+    height: 69.25vw;
+    /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+    min-height: 100vh;
+    min-width: 177.77vh;
+    /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vaultDeposits {
+    flex: 1 1 15%;
+}
+
+.vaultPerformance {
+    flex: 1 1 15%;
+    border-radius: 4px;
+}
+
+.vaultTransactions {
+    display: flex;
+    flex: 1 0 auto;
+    margin-top: 40px;
+    padding-bottom: 400px;
+}
+
+.background {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    background-color: transparent;
+    opacity: 0.1;
+    /* margin-top: 300px; */
+    z-index: 1;
+}
+
+.wavePosition {
+    position: absolute;
+    z-index: -1;
+    bottom: 5vh;
+}
+
+.imageContainer {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 66.66vw;
+}
+
+.landingImage {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+}
+
+@media (max-width: 1000px) {
+    .vaultTransactions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 770px) {
+    .vaultSection {
+        padding: 0;
+    }
+    .vaultTransactions {
+        padding-bottom: 0;
+    }
+    .vaultDepositsStatus {
+        margin-right: 0;
+    }
+}

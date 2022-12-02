@@ -1,0 +1,63 @@
+.performance {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #DC5355;
+    border-radius: 4px;
+    background: #1A1A1A;
+    padding: 40px;
+    flex: 1;
+}
+
+.vaultPerformance {
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.metrics {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    background: #1A1A1A;
+    border: 2px solid #474747;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.vaultPerformanceInfo {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: flex;
+    justify-content: center;
+}
+
+.metricRow {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(50px, 1fr));
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 1450px) {
+    .vaultPerformanceInfo {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1000px) {
+    .metricRow {
+        grid-template-columns: repeat(1, minmax(50px, 1fr));
+    }
+}
+
+@media (max-width: 770px) {
+    .metrics {
+        flex-direction: column;
+    }
+    .metricRow {
+        flex-direction: column;
+    }
+}
